@@ -1,0 +1,86 @@
+.c-buscador {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: 1em;
+    padding: 0.9em 1.2em;
+    margin: 1.5em auto;
+    display: block;
+    width: 90%;
+    max-width: 500px;
+    background-color: var(--neutral-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 30px;
+    box-shadow: 0 6px 12px rgba(255, 79, 79, 0.2);
+    color: #333333;
+    outline: none;
+    transition: border 0.3s, background 0.3s, box-shadow 0.3s;
+  }
+  
+  .c-buscador::placeholder {
+    color: #bbb;
+    font-style: italic;
+    letter-spacing: 0.5px;
+  }
+  
+  .c-buscador:focus {
+    background-color: var(--accent-color);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 12px var(--secondary-color);
+  }
+  
+  /* Lista de Pokémons */
+  .c-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 1000px;
+  }
+  
+  .c-lista-pokemon {
+    background: var(--accent-color);
+    border: 3px solid var(--secondary-color);
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.25s, box-shadow 0.25s;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgb(247, 82, 178);
+  }
+  
+  .c-lista-pokemon:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(183, 0, 255, 0.5);
+    background: linear-gradient(135deg, var(--secondary-color) 40%, var(--primary-color) 100%);
+    color: var(--accent-color);
+  }
+  
+  .c-lista-pokemon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .c-lista-pokemon img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  .pokemon-name {
+    font-size: 1em;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pokemon-id {
+    font-size: 0.85em;
+    color: #666;
+    font-weight: 600;
+  }

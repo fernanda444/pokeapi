@@ -1,0 +1,54 @@
+
+#root {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background: var(--accent-color);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .logo {
+    height: 5em;
+    margin: 1em 0;
+    transition: transform 0.4s, filter 0.4s;
+    filter: drop-shadow(0 0 0.5em var(--secondary-color));
+    border-radius: 50%;
+    background: var(--neutral-color);
+    padding: 1rem;
+  }
+  .logo:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 1.5em var(--primary-color));
+  }
+  .logo.react:hover {
+    filter: drop-shadow(0 0 1.5em var(--secondary-color));
+  }
+  
+  @keyframes logo-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-pulse 3s ease-in-out infinite;
+    }
+  }
+  
+  .card {
+    padding: 2.5em;
+    margin-top: 2rem;
+    background: var(--neutral-color);
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .read-the-docs {
+    color: var(--secondary-color);
+    font-style: italic;
+    margin-top: 1rem;
+    display: inline-block;
+  }
